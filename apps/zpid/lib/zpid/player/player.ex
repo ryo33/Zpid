@@ -10,13 +10,13 @@ defmodule Zpid.Player do
 
   @width 32
   @height 42
-  @frames Enum.map(0..7, fn i ->
+  @frames Enum.map(0..3, fn i ->
     %{x: i * 32, y: 0, width: @width, height: @height}
   end)
   defobject %{
     walk: %{
       animated_sprite: %{
-        image_url: "images/temporary/officer_walk_strip.png",
+        image_url: "images/player.png",
         frames: @frames}}}
   @running_speed 4 / 60 # 4m per 60frames
   @walking_speed 1 / 60 # 1m per 60frames
